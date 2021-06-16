@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nepe_app/constants.dart';
+import 'package:nepe_app/utils/constants.dart';
 import 'package:nepe_app/screens/Home/HomeScreen.dart';
 
 void main() {
