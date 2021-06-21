@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nepe_app/utils/constants.dart';
 import 'package:nepe_app/screens/Home/HomeScreen.dart';
+import 'package:nepe_app/screens/Navigation/BottomNav.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(),
+      home: BottomNav(),
     );
   }
 }
