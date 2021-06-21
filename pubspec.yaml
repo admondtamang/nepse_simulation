@@ -32,7 +32,12 @@ dependencies:
     http: ^0.13.3
     url_strategy: ^0.2.0
     flutter_svg: ^0.22.0
-
+    # Google sign-in
+    firebase_auth: ^1.4.1
+    google_sign_in: ^5.0.4
+    font_awesome_flutter: ^9.1.0
+    # state management
+    provider: ^5.0.0
 dev_dependencies:
     flutter_test:
         sdk: flutter

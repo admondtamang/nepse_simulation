@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "187650670785",
+    "project_id": "nepse-simulation",
+    "storage_bucket": "nepse-simulation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187650670785:android:aa6f754b74dee6a5fb5440",
+        "android_client_info": {
+          "package_name": "com.example.nepe_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187650670785-0ivp14mt0ncrbndca52aq1tagvij6d2f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI2eeUzjveIUAm4o8dmWv2EEUr7M1QjSM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187650670785-0ivp14mt0ncrbndca52aq1tagvij6d2f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
