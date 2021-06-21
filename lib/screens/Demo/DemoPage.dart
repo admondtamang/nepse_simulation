@@ -5,6 +5,16 @@ class DemoPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(child: Text("Demo"));
+    return Scaffold(
+      body: Center(
+        child: Text(
+          "Center",
+          style: TextStyle(
+              color: Colors.deepPurpleAccent,
+              fontSize: 50,
+              fontWeight: FontWeight.bold),
+        ),
+      ),
+    );
   }
 }

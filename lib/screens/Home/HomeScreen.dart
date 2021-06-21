@@ -5,6 +5,16 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(child: Text("Hello"));
+    return Scaffold(
+      body: Center(
+        child: Text(
+          "Home",
+          style: TextStyle(
+              color: Colors.deepPurpleAccent,
+              fontSize: 50,
+              fontWeight: FontWeight.bold),
+        ),
+      ),
+    );
   }
 }
