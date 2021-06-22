@@ -39,7 +39,7 @@ class _BottomNavState extends State<BottomNav> with TickerProviderStateMixin {
           controller: _tabController,
           indicator: BoxDecoration(
               color: kWhiteTransparentColor,
-              borderRadius: BorderRadius.circular(100)),
+              borderRadius: BorderRadius.circular(10)),
           tabs: [
             Icon(Icons.home),
             Icon(Icons.place),
