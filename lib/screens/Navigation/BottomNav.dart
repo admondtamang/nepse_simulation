@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:nepe_app/screens/Demo/DemoPage.dart';
 import 'package:nepe_app/screens/Home/HomeScreen.dart';
@@ -30,6 +31,8 @@ class _BottomNavState extends State<BottomNav> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    final user = FirebaseAuth.instance.currentUser;
+    print(user);
     return Scaffold(
       bottomNavigationBar: Container(
         height: 55,

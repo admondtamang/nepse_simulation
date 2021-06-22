@@ -11,21 +11,30 @@ class GoogleSignInProvider extends ChangeNotifier {
 
 // fires the google account selection box
   Future googleLogin() async {
-    final googleUser = await googleSignIn.signIn();
-    //  making sure if the user have selected an account
-    if (googleUser == null) return;
-    _user = googleUser;
-    // calling the google user thet is selected
-    final googleAuth = await googleUser.authentication;
-    // assigning the credentials gathered to google auth oprovider
-    final credential = GoogleAuthProvider.credential(
-      accessToken: googleAuth.accessToken,
-      idToken: googleAuth.idToken,
-    );
+    try {
+      final googleUser = await googleSignIn.signIn();
+      //  making sure if the user have selected an account
+      if (googleUser == null) return;
+      _user = googleUser;
+      // calling the google user thet is selected
+      final googleAuth = await googleUser.authentication;
+      // assigning the credentials gathered to google auth oprovider
+      final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth.accessToken,
+        idToken: googleAuth.idToken,
+      );
 
-    // using the credentials to signin into firebase auth
-    await FirebaseAuth.instance.signInWithCredential(credential);
+      // using the credentials to signin into firebase auth
+      await FirebaseAuth.instance.signInWithCredential(credential);
+    } catch (e) {
+      print(e.toString());
+    }
     // updating the UI
     notifyListeners();
+  }
+
+  Future Logout() async {
+    await googleSignIn.disconnect();
+    FirebaseAuth.instance.signOut();
   }
 }

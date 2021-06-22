@@ -1,6 +1,8 @@
 import 'dart:ui';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:nepe_app/provider/google_sign_in.dart';
+import 'package:provider/provider.dart';
 
 class ProfilePage extends StatelessWidget {
   @override
@@ -17,7 +19,12 @@ class ProfilePage extends StatelessWidget {
               'Logout',
               style: TextStyle(color: Colors.white),
             ),
-            onPressed: () {},
+            onPressed: () {
+              final provider =
+                  Provider.of<GoogleSignInProvider>(context, listen: false);
+
+              provider.Logout();
+            },
           )
         ],
       ),
@@ -27,13 +34,13 @@ class ProfilePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
-              height: 40,
+              height: 80,
             ),
             // user informations
             CircleAvatar(
-                radius: 40, backgroundImage: NetworkImage(user!.photoURL!)),
+                radius: 65, backgroundImage: NetworkImage(user!.photoURL!)),
             SizedBox(
-              width: 10,
+              width: 12,
             ),
             Padding(
               padding: EdgeInsets.all(10),
@@ -41,7 +48,7 @@ class ProfilePage extends StatelessWidget {
                 '' + user!.displayName!,
                 style: TextStyle(
                     color: Colors.deepPurpleAccent,
-                    fontSize: 20,
+                    fontSize: 30,
                     fontWeight: FontWeight.bold),
               ),
             )
