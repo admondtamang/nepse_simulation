@@ -1,8 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:nepe_app/screens/Demo/DemoPage.dart';
-import 'package:nepe_app/screens/Home/HomeScreen.dart';
+import 'package:nepe_app/screens/Movers/MoversPage.dart';
+import 'package:nepe_app/screens/Portfolio/PortfolioPage.dart';
 import 'package:nepe_app/screens/Profile/ProfilePage.dart';
+import 'package:nepe_app/screens/Transactions/TransactionPage.dart';
+import 'package:nepe_app/screens/Watchlist/WatchlistPage.dart';
 import 'package:nepe_app/utils/constants.dart';
 
 class BottomNav extends StatefulWidget {
@@ -20,7 +22,7 @@ class _BottomNavState extends State<BottomNav> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     _controller = AnimationController(vsync: this);
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 5, vsync: this);
   }
 
   @override
@@ -44,15 +46,23 @@ class _BottomNavState extends State<BottomNav> with TickerProviderStateMixin {
               color: kWhiteTransparentColor,
               borderRadius: BorderRadius.circular(10)),
           tabs: [
-            Icon(Icons.home),
-            Icon(Icons.place),
+            Icon(Icons.watch_later),
+            Icon(Icons.show_chart),
+            Icon(Icons.pie_chart),
+            Icon(Icons.import_export),
             Icon(Icons.person),
           ],
         ),
       ),
       body: TabBarView(
         controller: _tabController,
-        children: [HomeScreen(), DemoPage(), ProfilePage()],
+        children: [
+          WatchlistPage(),
+          MoversPage(),
+          PortfolioPage(),
+          TransactionPage(),
+          ProfilePage()
+        ],
       ),
     );
   }

@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
-class DemoPage extends StatelessWidget {
-  const DemoPage({Key? key}) : super(key: key);
-
+class PortfolioPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Text(
-          "Center",
+          "Portfolio",
           style: TextStyle(
               color: Colors.deepPurpleAccent,
               fontSize: 50,

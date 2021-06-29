@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
-
+class WatchlistPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Text(
-          "Home",
+          "Watchlist",
           style: TextStyle(
               color: Colors.deepPurpleAccent,
               fontSize: 50,
